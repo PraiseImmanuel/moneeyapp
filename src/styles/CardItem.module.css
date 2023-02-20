@@ -1,0 +1,19 @@
+.card_item {
+    display: flex;
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.loader_long,
+.loader_short {
+    background-color: #f5f5f5;
+    border-radius: 0.25rem;
+    display: block;
+    height: 1rem;
+    width: 12.5rem;
+}
+
+.loader_short {
+    width: 8.25rem;
+    margin-top: 0.5rem;
+}
