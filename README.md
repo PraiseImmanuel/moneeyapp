@@ -11,20 +11,6 @@ https://moneey-app.netlify.app/
 1. Relevant for the project:
 ```bash
 .
-Residue formula: proof
-Method of solution for Integrating fator
-Exact differential equations Example
-Necessary Conditions For Exact Differential Equations
-Method of separable Function Example 2
-Inexact Differential Equations Method Of Solution
-Differentiation of parametric functions
-
-
-
-const App:React.FC = () => {
-return()
-}
-
 ├── apis
 	├── apollos.ts
 	├── queries.ts
