@@ -51,8 +51,12 @@ h3.heading {
     border-radius: 1.25rem;
 }
 
-.logo {
-    display: none;
+.card:last-of-type h3.heading {
+    color: #1a1a1a;
+}
+
+.card:last-of-type .small_font_size {
+    color: #73798c;
 }
 
 @media screen and (min-width: 920px) {

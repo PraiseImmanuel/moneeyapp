@@ -38,9 +38,14 @@
     border: 1px solid transparent;
     border-radius: 3rem;
     color: #ffffff;
+    cursor: pointer;
     font-size: inherit;
     padding: 1rem;
     width: 100%;
+}
+
+.submit_button:hover {
+    opacity: 0.9;
 }
 
 input[type="password"]::-ms-reveal,
@@ -52,8 +57,4 @@ input[type="password"]::-ms-clear {
     visibility: hidden;
     opacity: 0;
     transition: 0.25s ease-in-out;
-}
-
-@media screen and (min-width: 920px) {
-    /* .label */
 }
