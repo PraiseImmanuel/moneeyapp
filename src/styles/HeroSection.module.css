@@ -59,6 +59,10 @@ h3.heading {
     color: #73798c;
 }
 
+.logo {
+    display: none;
+}
+
 @media screen and (min-width: 920px) {
     .hero_container {
         display: flex;
