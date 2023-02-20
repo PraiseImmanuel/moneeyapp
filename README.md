@@ -6,6 +6,11 @@ This project is a assessment for moneeyapp frontend developers
 
 https://moneey-app.netlify.app/
 
+#Password for trial
+
+Email: dummy@email.com
+Password:dummy
+
 ### Folder Structure
 
 1. Relevant for the project:
