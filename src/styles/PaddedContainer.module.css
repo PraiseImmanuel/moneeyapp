@@ -1,0 +1,10 @@
+/* Fix  for nav element height */
+.padded_container {
+    padding-top: 8rem;
+}
+
+@media screen and (min-width: 920px) {
+    .padded_container {
+        padding-top: 0;
+    }
+}

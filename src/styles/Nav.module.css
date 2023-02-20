@@ -1,0 +1,17 @@
+.logo_container {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.logo {
+    margin: 1rem 0;
+    padding: 0 0 0 clamp(1.25rem, 8vw, 3rem);
+}
+
+@media screen and (min-width: 920px) {
+    .logo_container {
+        display: none;
+    }
+}

@@ -1,0 +1,71 @@
+.hero_container {
+    background-color: #ffffff;
+    margin: 0 auto;
+    max-width: 25rem;
+    padding: 0 clamp(1.25rem, 8vw, 3rem) 8rem;
+}
+
+/* Into Section */
+
+.intro_section {
+    margin-bottom: 3rem;
+}
+
+.intro_section > p {
+    color: #595959;
+}
+
+h1.heading {
+    color: #1a1a1a;
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+/* Cards Section */
+
+.cards_section {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.card {
+    column-gap: 1.25rem;
+    display: flex;
+    padding: 1rem;
+}
+
+h3.heading {
+    color: #858585;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.small_font_size {
+    color: #a3a3a3;
+    font-size: 0.75rem;
+}
+
+.card:last-of-type {
+    background-color: #f8f8f6;
+    border-radius: 1.25rem;
+}
+
+.logo {
+    display: none;
+}
+
+@media screen and (min-width: 920px) {
+    .hero_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 8rem clamp(1.25rem, 8vw, 3rem) 8rem 0;
+        min-height: 99vh;
+    }
+
+    .logo {
+        display: block;
+        margin: 1rem 0 0 -0.75rem;
+    }
+}

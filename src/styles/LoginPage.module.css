@@ -1,0 +1,46 @@
+.login_container {
+    background-color: #fef0f2;
+    padding: 6rem clamp(1.25rem, 8vw, 3rem);
+}
+
+.login_box {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    margin: 0 auto;
+    max-width: 35rem;
+    padding: 3rem clamp(2rem, 6vw, 4rem);
+}
+
+h3.heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.login_box > p {
+    margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 920px) {
+    .main_container {
+        display: flex;
+    }
+
+    .login_container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 60%;
+    }
+
+    .login_align_container {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .login_box {
+        width: 100%;
+    }
+}
