@@ -17,3 +17,13 @@
     width: 8.25rem;
     margin-top: 0.5rem;
 }
+
+@media screen and (max-width: 400px) {
+    .loader_long {
+        width: 8.5rem;
+    }
+
+    .loader_short {
+        width: 6rem;
+    }
+}
