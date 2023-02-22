@@ -1,6 +1,6 @@
 # Moneey App
 
-This project is an assessment of moneey app test a frontend developers speed, UI skills and code complexity.
+This project is an assessment of moneey app to test a frontend developers speed, UI skills and code complexity.
 
 # Task
 
