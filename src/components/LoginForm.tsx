@@ -21,9 +21,15 @@ const Form: React.FC = () => {
             userContext.user.password === dummyLogin.password
         ) {
             setSuccess(true);
+            userContext.setUser({
+                ...userContext.user,
+                authenticated: true,
+            });
+            // set time of login
+            sessionStorage.setItem("loginTime", JSON.stringify(Date.now()));
             setTimeout(() => {
                 navigate("/dashboard");
-            }, 5000);
+            }, 2000);
         } else {
             setSuccess(false);
         }
@@ -51,8 +57,8 @@ const Form: React.FC = () => {
                             className={styles.input}
                             onChange={(event) =>
                                 userContext.setUser({
+                                    ...userContext.user,
                                     email: event.target.value,
-                                    password: userContext.user.password,
                                 })
                             }
                         />
@@ -67,7 +73,7 @@ const Form: React.FC = () => {
                             className={styles.input}
                             onChange={(event) =>
                                 userContext.setUser({
-                                    email: userContext.user.email,
+                                    ...userContext.user,
                                     password: event.target.value,
                                 })
                             }

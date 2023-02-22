@@ -3,6 +3,7 @@ import React, { useState, createContext } from "react";
 export type AuthenticatedUser = {
     email: string;
     password: string;
+    authenticated: boolean;
 };
 
 type UserContextType = {
@@ -20,6 +21,7 @@ export const UserContextProvider = ({ children }: UserContextProviderProps) => {
     const [user, setUser] = useState<AuthenticatedUser>({
         email: "",
         password: "",
+        authenticated: false,
     });
     return (
         <UserContext.Provider value={{ user, setUser }}>

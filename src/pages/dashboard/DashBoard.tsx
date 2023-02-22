@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import LetteredAvatar from "react-lettered-avatar";
 
 import { useQuery } from "@apollo/client";
@@ -7,26 +7,51 @@ import PaddedContainer from "../../components/PaddedContainer";
 
 import styles from "../../styles/Dashboard.module.css";
 import { images } from "../../images/images";
+import { UserContext } from "../../context/UserCoxtext";
 import CardItem from "../../components/CardItem";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard: React.FC = () => {
-    const { loading, error, data } = useQuery(GET_DETAILS);
-    const [loadingData, setLoadingData] = useState<boolean>(false);
-    const [err, setErr] = useState<string | undefined>("");
-    //eslint-disable-next-line
-    console.log(loading, error, data);
+    const { data } = useQuery(GET_DETAILS);
+    // const [loadingData, setLoadingData] = useState<boolean>(false);
+    // const [err, setErr] = useState<string | undefined>("");
+
+    // useEffect(() => {
+    //     if (loading) {
+    //         setLoadingData(loading);
+    //     }
+
+    //     if (error) {
+    //         setErr(`Error! ${error.message}`);
+    //     }
+    // }, [loading, error]);
+
+    const userContext = useContext(UserContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        if (loading) {
-            setLoadingData(loading);
+        const loginTime = parseInt(sessionStorage.getItem("loginTime") ?? "");
+        if (userContext) {
+            if (!userContext.user.authenticated) {
+                navigate("/");
+            } else {
+                if (Date.now() - loginTime > 2 * 60000) {
+                    userContext.setUser({
+                        ...userContext.user,
+                        authenticated: false,
+                    });
+                    sessionStorage.clear();
+                }
+                setTimeout(() => {
+                    userContext.setUser({
+                        ...userContext.user,
+                        authenticated: false,
+                    });
+                    sessionStorage.clear();
+                }, 2 * 60000 - (Date.now() - loginTime));
+            }
         }
-
-        if (error) {
-            setErr(`Error! ${error.message}`);
-        }
-    }, [loading, error]);
-    //eslint-disable-next-line
-    console.log(loadingData, err);
+    }, [userContext, navigate]);
 
     return (
         <PaddedContainer>

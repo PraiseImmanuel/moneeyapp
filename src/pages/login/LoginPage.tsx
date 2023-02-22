@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../../styles/LoginPage.module.css";
 import HeroSection from "../../components/HeroSection";
-import Form from "../../components/Form";
+import Form from "../../components/LoginForm";
 import PaddedContainer from "../../components/PaddedContainer";
 
 const LoginPage: React.FC = () => {
