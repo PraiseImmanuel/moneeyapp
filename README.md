@@ -3,11 +3,13 @@
 This project is an assessment of moneey app to test a frontend developers speed, UI skills and code complexity.
 
 # Task
-
+```
 -Implement the 2 screens in the figma design.
 -Integrate the graphql api link above, using the company query , get the ceo , cto , company name and prefill on the company details screen
 -For the login screen, create dummy username and password, use React context to store the dummy username and password that will allow the user login to the company details page.
 -Security - Log the user out after every 2 mins, let them relogin to access the dashboard.
+
+```
 
 # Design Link
 
